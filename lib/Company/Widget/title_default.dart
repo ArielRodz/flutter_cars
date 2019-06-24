@@ -15,7 +15,7 @@ class TitleDefault extends StatelessWidget{
           fontSize: 16.0,
           color: Colors.white,
           fontWeight: FontWeight.bold,
-          fontFamily: 'Oswald'
+         // fontFamily: 'Oswald'
 
       ),
     );

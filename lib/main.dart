@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'Company/Widget/company_list.dart';
 import 'Drivers/Widget/driver_list.dart';
-import 'Drivers/Widget/driver_list_version_two.dart';
+import 'Profile/Widget/profile_card.dart';
 
 void main() => runApp(MyApp());
 
@@ -34,11 +34,9 @@ class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
    List<Widget> _widgetOptions = <Widget>[
     Companies(),
-     FriendsListPage(),
-    Text(
-      'Index 2: School',
-      style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-    ),
+     Drivers(),
+  UserProfilePage(),
+
   ];
 
   void _onItemTapped(int index) {
@@ -55,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.red,
-        title: Text("Clientes", style: TextStyle(color: Colors.white), ),
+        title: Text("App", style: TextStyle(color: Colors.white), ),
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
@@ -72,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.person),
-              title: Text('Yo'),
+              title: Text('Mi Perfil'),
             ),
           ],
           currentIndex: _selectedIndex,
